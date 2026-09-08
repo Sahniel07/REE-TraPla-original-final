@@ -1,0 +1,9 @@
+# Keep LF line endings on checkout, on every platform.
+#
+# sweep.sh is read by bash, which treats a trailing CR as part of the shebang
+# and fails with "/usr/bin/env: 'bash\r': No such file or directory". Git on
+# Windows converts to CRLF by default, so the endings are pinned here rather
+# than left to each machine's core.autocrlf setting.
+* text=auto eol=lf
+
+*.png binary
